@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageUserChatPages"
+        android:layout_width="55dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ribi"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtNameUserChatPages"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Ribi"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintStart_toEndOf="@+id/imageUserChatPages"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <TextView
+        android:id="@+id/txtContentUserChatPages"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_marginStart="24dp"
+        android:gravity="center"
+        android:text="oke"
+        app:layout_constraintStart_toEndOf="@+id/imageUserChatPages"
+        app:layout_constraintTop_toBottomOf="@+id/txtNameUserChatPages"
+        tools:ignore="DuplicateIds"></TextView>
+
+    <TextView
+        android:id="@+id/txtTimeUserChatPages"
+        android:layout_width="wrap_content"
+        android:layout_height="53dp"
+        android:layout_marginTop="16dp"
+        android:text="Today"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.876"
+        app:layout_constraintStart_toEndOf="@+id/txtNameUserChatPages"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

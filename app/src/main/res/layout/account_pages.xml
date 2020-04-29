@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerAccountPages"
+        android:layout_width="411dp"
+        android:layout_height="168dp"
+        android:background="@drawable/image_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageUserAccountPages"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/ribi"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/nameUserAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="16dp"
+            android:text="Name Account"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/imageUserAccountPages" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerAccountPages">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Thông tin cá nhân"
+                android:textSize="24dp"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="15dp" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24dp">
+
+            <ImageView
+                android:id="@+id/imageNameAccontPages"
+                android:layout_width="60dp"
+
+                android:layout_height="60dp"
+                android:layout_marginStart="30dp"
+                android:src="@drawable/ic_account_box_black_24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="nsnd Văn Khải"
+                app:layout_constraintStart_toEndOf="@+id/imageNameAccontPages"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24dp">
+
+            <ImageView
+                android:id="@+id/imageAddressAccountPages"
+                android:layout_width="60dp"
+
+                android:layout_height="60dp"
+                android:layout_marginStart="30dp"
+                android:src="@drawable/ic_place_black_24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Ha Noi"
+                app:layout_constraintStart_toEndOf="@+id/imageAddressAccountPages"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24dp">
+
+            <ImageView
+                android:id="@+id/imagePhoneAccountPages"
+                android:layout_width="60dp"
+
+                android:layout_height="60dp"
+                android:layout_marginStart="30dp"
+                android:src="@drawable/ic_call_black_24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="0904556735"
+                app:layout_constraintStart_toEndOf="@+id/imagePhoneAccountPages"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24dp">
+
+            <ImageView
+                android:id="@+id/imageBordAccountPages"
+                android:layout_width="60dp"
+
+                android:layout_height="60dp"
+                android:layout_marginStart="30dp"
+                android:src="@drawable/ic_today_black_24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="24/10/1999"
+                app:layout_constraintStart_toEndOf="@+id/imageBordAccountPages"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

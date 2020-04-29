@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerThueTro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/cancelThueTro"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_cancel_black_24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đăng bài"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/cancelThueTro"
+            app:layout_constraintRight_toLeftOf="@+id/submitThueTro"
+            android:textSize="28dp"
+            android:layout_marginTop="5dp"></TextView>
+
+        <TextView
+            android:paddingRight="10dp"
+            android:id="@+id/submitThueTro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xong"
+            android:textSize="28dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"></TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textViewThueTro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cho Thuê Phòng Trọ"
+        app:layout_constraintTop_toBottomOf="@id/headerThueTro"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="24dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="20dp" />
+
+    <TextView
+        android:id="@+id/textViewKhuVucThueTro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Khu Vực"
+        android:textSize="24dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewThueTro"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtKhuVucThueTro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Nhập khu vực"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewKhuVucThueTro"
+        app:layout_constraintLeft_toRightOf="@+id/textViewKhuVucThueTro"
+        android:layout_marginLeft="20dp" />
+
+    <TextView
+        android:id="@+id/textViewGiaPhongThueTro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giá Phòng"
+        android:textSize="24dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewKhuVucThueTro"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtGiaPhongThueTro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Nhập giá phòng"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewGiaPhongThueTro"
+        app:layout_constraintLeft_toRightOf="@+id/textViewGiaPhongThueTro"
+        android:layout_marginLeft="20dp" />
+
+    <TextView
+        android:id="@+id/textViewMoTaThueTro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mô tả"
+        android:textSize="24dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewGiaPhongThueTro"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtMoTaThueTro"
+        android:layout_width="366dp"
+        android:layout_height="86dp"
+        android:layout_marginLeft="20dp"
+        android:hint="Nhập mô tả"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewMoTaThueTro" />
+
+    <ImageView
+        android:id="@+id/imgHomeThueTro"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_add_a_photo_black_24dp"
+        app:layout_constraintTop_toBottomOf="@id/txtMoTaThueTro"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
