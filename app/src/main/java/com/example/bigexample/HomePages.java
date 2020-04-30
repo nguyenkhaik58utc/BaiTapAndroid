@@ -33,19 +33,19 @@ public class HomePages extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(home_pages, container, false);
-        lst = (ListView) view.findViewById(R.id.listPostABC);
-        final CustomAdapter adapter = new CustomAdapter(getActivity(), getNewPost());
-        lst.setAdapter(adapter);
-        lst.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ProfireUser profireUser = new ProfireUser();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, profireUser);
-                transaction.commit();
-            }
-        });
-        return inflater.inflate(home_pages, container, false);
+//        lst = (ListView) view.findViewById(R.id.listPostABC);
+//        final CustomAdapter adapter = new CustomAdapter(getActivity(), getNewPost());
+//        lst.setAdapter(adapter);
+//        lst.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                ProfireUser profireUser = new ProfireUser();
+//                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+//                transaction.replace(R.id.fragment_container, profireUser);
+//                transaction.commit();
+//            }
+//        });
+        return view;
     }
 
     public ArrayList<Post> getNewPost() {
