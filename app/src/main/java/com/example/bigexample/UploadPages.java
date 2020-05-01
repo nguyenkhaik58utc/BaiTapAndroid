@@ -1,8 +1,6 @@
 package com.example.bigexample;
 
 
-import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,11 +14,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.bigexample.models.Post;
-
-import java.util.ArrayList;
-
-import static com.example.bigexample.R.layout.thuetro_pages;
 import static com.example.bigexample.R.layout.upload_pages;
 
 public class UploadPages extends Fragment {

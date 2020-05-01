@@ -6,22 +6,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.bigexample.models.Post;
-import com.example.bigexample.models.Post2;
+import com.example.bigexample.models.RowPost;
 
 import java.util.ArrayList;
 
 public class Base extends BaseAdapter {
 
-    ArrayList<Post2> list;
+    ArrayList<RowPost> list;
     Context context;
 
     Base(Context c) {
         context = c;
-        list = new ArrayList<Post2>();
+        list = new ArrayList<RowPost>();
         Resources resources = c.getResources();
         String[] nameUserPost = {"chim sẻ", "nsnd văn ver", "hải mario"};
         int[] idUserPost = {1, 2, 3};
@@ -29,7 +27,7 @@ public class Base extends BaseAdapter {
         String[] priceUserPost = {"1000", "2000-2500", "1200"};
         String[] describe = {"khép kín, giường, tử, nóng lạnh,..", "khép kín, giường, tử, nóng lạnh,..", "khép kín, giường, tử, nóng lạnh,.."};
         for (int i = 0; i < idUserPost.length; i++) {
-            list.add(new Post2(idUserPost[i], nameUserPost[i], priceUserPost[i], addressPost[i], describe[i]));
+            list.add(new RowPost(idUserPost[i], nameUserPost[i], addressPost[i], priceUserPost[i], describe[i],idUserPost[i]));
         }
     }
 
@@ -57,7 +55,7 @@ public class Base extends BaseAdapter {
         TextView priceUserPost = (TextView) view.findViewById(R.id.phoneUserPost);
         TextView describe = (TextView) view.findViewById(R.id.describe);
         TextView addressPost = (TextView) view.findViewById(R.id.addressPost);
-        Post2 temp = list.get(position);
+        RowPost temp = list.get(position);
         String a = temp.getNameUserPost();
         String b = temp.getPhoneUserPost();
         String c = temp.getDescribe();

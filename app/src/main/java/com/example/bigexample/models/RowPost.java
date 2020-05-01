@@ -1,6 +1,6 @@
 package com.example.bigexample.models;
 
-public class Post {
+public class RowPost {
     private int imageUserPost;
     private String nameUserPost;
     private String addressPost;
@@ -57,7 +57,7 @@ public class Post {
     }
 
 
-    public Post(int imageUserPost, String nameUserPost, String addressPost, String phoneUserPost, String describe, int imageAddress) {
+    public RowPost(int imageUserPost, String nameUserPost, String addressPost, String phoneUserPost, String describe, int imageAddress) {
         this.imageUserPost = imageUserPost;
         this.nameUserPost = nameUserPost;
         this.addressPost = addressPost;

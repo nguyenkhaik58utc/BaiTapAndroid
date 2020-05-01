@@ -1,6 +1,5 @@
 package com.example.bigexample;
 
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -9,16 +8,16 @@ import android.widget.TextView;
 
 import androidx.fragment.app.FragmentActivity;
 
-import com.example.bigexample.models.Post;
+import com.example.bigexample.models.RowPost;
 
 import java.util.ArrayList;
 
 public class CustomAdapter extends BaseAdapter {
     private FragmentActivity context; //context
-    private ArrayList<Post> players; //data source of the list adapter
+    private ArrayList<RowPost> players; //data source of the list adapter
 
 
-    public CustomAdapter(FragmentActivity context, ArrayList<Post> players) {
+    public CustomAdapter(FragmentActivity context, ArrayList<RowPost> players) {
         this.context = context;
         this.players = players;
     }
@@ -43,7 +42,7 @@ public class CustomAdapter extends BaseAdapter {
 
         View view = convertView;
 
-        Post p = (Post) getItem(position);
+        RowPost p = (RowPost) getItem(position);
         if (p != null) {
             // Anh xa + Gan gia tri
             ImageView imageUserPost = (ImageView) view.findViewById(R.id.imageUserPost);

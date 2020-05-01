@@ -4,10 +4,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 
 /**
@@ -35,8 +37,17 @@ public class FragmentHome extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_home, container, false);
         lst = view.findViewById(R.id.lstPost);
-        adapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1,nameUserPost);
-        lst.setAdapter(adapter);
+        lst.setAdapter(new Base(getActivity()));
+        lst.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                ProfireUser profireUser = new ProfireUser();
+//                FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
+//                transaction.replace(R.id.fragment_container, profireUser);
+//                transaction.commit();
+            }
+        });
         return view;
     }
+
 }
