@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/../BIgExamPle.iml" filepath="$PROJECT_DIR$/../BIgExamPle.iml" group="BIgExamPle" />
       <module fileurl="file://$PROJECT_DIR$/../BaiTapAndroid-BIgExamPle.iml" filepath="$PROJECT_DIR$/../BaiTapAndroid-BIgExamPle.iml" group="BIgExamPle" />
       <module fileurl="file://$PROJECT_DIR$/BaiTapAndroid-app.iml" filepath="$PROJECT_DIR$/BaiTapAndroid-app.iml" group="BIgExamPle/app" />
+      <module fileurl="file://$PROJECT_DIR$/../StudioProjects-BaiTapAndroid-BIgExamPle.iml" filepath="$PROJECT_DIR$/../StudioProjects-BaiTapAndroid-BIgExamPle.iml" group="BIgExamPle" />
+      <module fileurl="file://$PROJECT_DIR$/StudioProjects-BaiTapAndroid-app.iml" filepath="$PROJECT_DIR$/StudioProjects-BaiTapAndroid-app.iml" group="BIgExamPle/app" />
       <module fileurl="file://$PROJECT_DIR$/app.iml" filepath="$PROJECT_DIR$/app.iml" group="BIgExamPle/app" />
     </modules>
   </component>

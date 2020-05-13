@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/nav_home"
+        android:id="@+id/nav_friend"
         android:icon="@drawable/ic_people_black_24dp"
         android:title="Bạn bè" />
     <item
-        android:id="@+id/nav_upload"
+        android:id="@+id/nav_follow"
         android:icon="@drawable/ic_nature_people_black_24dp"
         android:title="Theo dõi" />
     <item
-        android:id="@+id/nav_chat"
+        android:id="@+id/nav_chat_friend"
         android:icon="@drawable/ic_chat_black_24dp"
         android:title="Chat" />
     <item
-        android:id="@+id/nav_account"
+        android:id="@+id/nav_information_friend"
         android:icon="@drawable/ic_info_black_24dp"
         android:title="Thông tin" />
 </menu>

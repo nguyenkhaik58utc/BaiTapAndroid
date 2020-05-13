@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/headerAccountPages"
+        android:id="@+id/headerInformationUser"
         android:layout_width="match_parent"
         android:layout_height="168dp"
         android:background="@drawable/image_background"
@@ -14,7 +14,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/imageUserAccountPages"
+            android:id="@+id/imageUserInformationUser"
             android:layout_width="96dp"
             android:layout_height="96dp"
             android:layout_marginBottom="16dp"
@@ -26,18 +26,18 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/nameUserAccount"
+            android:id="@+id/nameUserInformationUser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginBottom="16dp"
             android:text="Name Account"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toRightOf="@+id/imageUserAccountPages" />
+            app:layout_constraintLeft_toRightOf="@+id/imageUserInformationUser" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation_profire_user"
+        android:id="@+id/bottom_navigation_information_user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -45,7 +45,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/headerAccountPages"
+        app:layout_constraintTop_toBottomOf="@+id/headerInformationUser"
         app:menu="@menu/bottom_navigation_profireuser"></com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <ListView
@@ -57,7 +57,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bottom_navigation_profire_user">
+        app:layout_constraintTop_toBottomOf="@+id/bottom_navigation_information_user">
 
     </ListView>
 

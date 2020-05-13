@@ -1,4 +1,4 @@
-package com.example.bigexample;
+package com.example.bigexample.Data;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.example.bigexample.R;
 import com.example.bigexample.models.RowPost;
 
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ public class Base extends BaseAdapter {
     ArrayList<RowPost> list;
     Context context;
 
-    Base(Context c) {
+    public Base(Context c) {
         context = c;
         list = new ArrayList<RowPost>();
         Resources resources = c.getResources();
