@@ -1,7 +1,12 @@
 package com.example.bigexample;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.TestLooperManager;
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +19,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import java.io.IOException;
+
 public class ThueTroPages extends Fragment {
     ImageView cancelThueTro;
     TextView submitThueTro;
@@ -21,6 +28,7 @@ public class ThueTroPages extends Fragment {
     EditText txtGiaPhongThueTro;
     EditText txtMoTaThueTro;
     ImageView imgThueTro;
+    private static final int PICK_IMAGE = 222;
 
     @Nullable
     @Override
@@ -42,6 +50,35 @@ public class ThueTroPages extends Fragment {
                 transaction.commit();
             }
         });
+
+        imgThueTro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent getIntent = new Intent(Intent.ACTION_GET_CONTENT);getIntent.setType("image/*");
+                Intent pickIntent = new Intent(Intent.ACTION_PICK,
+                        android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                pickIntent.setType("image/*");
+                Intent chooserIntent = Intent.createChooser(getIntent,
+                        getString(R.string.app_name));
+                chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, new Intent[]{pickIntent});
+                startActivityForResult(chooserIntent, PICK_IMAGE);
+            }
+        });
         return view;
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == PICK_IMAGE && resultCode == Activity.RESULT_OK) {
+
+//            try {
+//                Uri imageUri = data.getData();
+//                Bitmap photo = MediaStore.Images.Media.getBitmap(this.getR)
+//            } catch (IOException e) {
+//
+//            }
+
+            return;    }
     }
 }

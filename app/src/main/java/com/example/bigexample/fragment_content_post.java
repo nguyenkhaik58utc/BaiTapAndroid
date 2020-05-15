@@ -6,10 +6,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+
+import com.example.bigexample.Data.BaseComment;
 
 
 /**
@@ -24,7 +27,7 @@ public class fragment_content_post extends Fragment {
     TextView describeContentPost;
     ImageView imageAddressContentPost1;
     ImageView imageAddressContentPost2;
-
+    ListView lst;
 
     public fragment_content_post() {
         // Required empty public constructor
@@ -43,6 +46,11 @@ public class fragment_content_post extends Fragment {
         describeContentPost = view.findViewById(R.id.describeContentPost);
         imageAddressContentPost1 = view.findViewById(R.id.imageAddressContentPost1);
         imageAddressContentPost2 = view.findViewById(R.id.imageAddressContentPost2);
+
+
+        lst = view.findViewById(R.id.lstComment);
+        lst.setAdapter(new BaseComment(getActivity()));
+
         Bundle bundle = getArguments();
         if(bundle != null)
         {

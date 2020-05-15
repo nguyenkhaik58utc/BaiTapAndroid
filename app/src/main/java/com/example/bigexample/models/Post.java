@@ -7,6 +7,7 @@ public class Post {
     private String phoneUserPost;
     private String describe;
     private int imageAddress;
+    private int imageAddress2;
 
     public Post(int i, String s, String s1, String s2, String s3) {
     }

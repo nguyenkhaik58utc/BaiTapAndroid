@@ -43,7 +43,7 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="40dp"
                 android:gravity="center"
                 android:paddingLeft="20dp"
                 android:text="Price : "
@@ -52,7 +52,7 @@
             <TextView
                 android:id="@+id/phoneUserContentPost"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="40dp"
                 android:gravity="center"
                 android:paddingLeft="20dp"
                 android:textSize="19dp"></TextView>
@@ -67,7 +67,7 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingLeft="20dp"
                 android:text="Address : "
@@ -76,7 +76,7 @@
             <TextView
                 android:id="@+id/addressContentPost"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingLeft="20dp"
                 android:textSize="19dp"></TextView>
@@ -91,7 +91,7 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="40dp"
                 android:gravity="center"
                 android:paddingLeft="20dp"
                 android:text="Describe : "
@@ -100,7 +100,7 @@
             <TextView
                 android:id="@+id/describeContentPost"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingLeft="20dp"
                 android:textSize="19dp"></TextView>
@@ -128,6 +128,10 @@
 
 
         </LinearLayout>
+        <ListView
+            android:id="@+id/lstComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></ListView>
 
     </LinearLayout>
 
