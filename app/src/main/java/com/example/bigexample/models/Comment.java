@@ -2,6 +2,8 @@ package com.example.bigexample.models;
 
 public class Comment {
     private int id;
+    private  int idUserCmt;
+    private String imgUserCmt;
     private String nameUserCmt;
     private String contentCmt;
 
@@ -11,6 +13,24 @@ public class Comment {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getIdUserCmt() {
+        return idUserCmt;
+    }
+
+    public void setIdUserCmt(int idUserCmt) {
+        this.idUserCmt = idUserCmt;
+    }
+
+
+
+    public Comment(int id, int idUserCmt, String imgUserCmt, String nameUserCmt, String contentCmt) {
+        this.id = id;
+        this.idUserCmt = idUserCmt;
+        this.imgUserCmt = imgUserCmt;
+        this.nameUserCmt = nameUserCmt;
+        this.contentCmt = contentCmt;
     }
 
     public String getNameUserCmt() {
@@ -32,6 +52,19 @@ public class Comment {
     public Comment(int id, String nameUserCmt, String contentCmt) {
         this.id = id;
         this.nameUserCmt = nameUserCmt;
+        this.contentCmt = contentCmt;
+    }
+
+    public Comment(int id, int idUserCmt, String nameUserCmt, String contentCmt) {
+        this.id = id;
+        this.idUserCmt = idUserCmt;
+        this.nameUserCmt = nameUserCmt;
+        this.contentCmt = contentCmt;
+    }
+
+    public Comment(int id, int idUserCmt, String contentCmt) {
+        this.id = id;
+        this.idUserCmt = idUserCmt;
         this.contentCmt = contentCmt;
     }
 }

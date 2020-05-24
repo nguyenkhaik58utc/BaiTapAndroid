@@ -2,34 +2,28 @@ package com.example.bigexample.Data;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.bigexample.R;
+import com.example.bigexample.models.Post;
 import com.example.bigexample.models.RowPost;
 
 import java.util.ArrayList;
 
 public class Base extends BaseAdapter {
 
-    ArrayList<RowPost> list;
+    ArrayList<Post> list;
     Context context;
 
-    public Base(Context c) {
+    public Base(Context c, ArrayList<Post> posts) {
         context = c;
-        list = new ArrayList<RowPost>();
-        Resources resources = c.getResources();
-        String[] nameUserPost = {"chim sẻ", "nsnd văn ver", "hải mario"};
-        int[] idUserPost = {1, 2, 3};
-        String[] addressPost = {"12 Dương Quảng Hàm", "đam phượng", "nam định"};
-        String[] priceUserPost = {"1000", "2000-2500", "1200"};
-        String[] describe = {"khép kín, giường, tử, nóng lạnh,..", "khép kín, giường, tử, nóng lạnh,..", "khép kín, giường, tử, nóng lạnh,.."};
-        for (int i = 0; i < idUserPost.length; i++) {
-            list.add(new RowPost(idUserPost[i], nameUserPost[i], addressPost[i], priceUserPost[i], describe[i],idUserPost[i]));
-        }
+        list = posts;
     }
 
     @Override
@@ -49,22 +43,39 @@ public class Base extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.activity_new_post, parent, false);
 
-        TextView nameUserPost = (TextView) view.findViewById(R.id.nameUserPost);
-        TextView priceUserPost = (TextView) view.findViewById(R.id.phoneUserPost);
-        TextView describe = (TextView) view.findViewById(R.id.describe);
-        TextView addressPost = (TextView) view.findViewById(R.id.addressPost);
-        RowPost temp = list.get(position);
-        String a = temp.getNameUserPost();
-        String b = temp.getPhoneUserPost();
-        String c = temp.getDescribe();
-        String d = temp.getAddressPost();
-        nameUserPost.setText(a);
-        priceUserPost.setText(b);
-        describe.setText(c);
-        addressPost.setText(d);
+        ImageView imageUserPost = view.findViewById(R.id.imageUserPost);
+        TextView nameUserPost = view.findViewById(R.id.nameUserPost);
+        TextView priceUserPost = view.findViewById(R.id.phoneUserPost);
+        TextView describe = view.findViewById(R.id.describe);
+        TextView addressPost = view.findViewById(R.id.addressPost);
+        ImageView imageAddress1 = view.findViewById(R.id.imageAddress1);
+        ImageView imageAddress2 = view.findViewById(R.id.imageAddress2);
+        TextView txtLikeNewPost = view.findViewById(R.id.txtLikeNewPost);
+        TextView txtCommentNewPost = view.findViewById(R.id.txtCommentNewPost);
+
+        Post temp = list.get(position);
+        imageUserPost.setImageURI(Uri.parse(temp.getImageUserPost()));
+        nameUserPost.setText(temp.getNameUserPost());
+        priceUserPost.setText(temp.getPricePost());
+        describe.setText(temp.getDescribe());
+        addressPost.setText(temp.getAddressPost());
+        txtLikeNewPost.setText(String.valueOf( temp.getNumberLike()));
+        txtCommentNewPost.setText(String.valueOf(temp.getNumberComment()));
+        if(temp.getImageAddress().equals("") && temp.getImageAddress2().equals(""))
+        {
+            imageAddress1.setVisibility(View.GONE);
+            imageAddress2.setVisibility(View.GONE);
+        }
+        else
+        {
+            Uri UriAddr1 = Uri.parse(temp.getImageAddress());
+            imageAddress1.setImageURI(UriAddr1);
+            Uri UriAddr2 = Uri.parse(temp.getImageAddress2());
+            imageAddress2.setImageURI(UriAddr2);
+        }
         return view;
 
 

@@ -46,7 +46,7 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingLeft="20dp"
                 android:text="Price : "
@@ -55,7 +55,7 @@
             <TextView
                 android:id="@+id/phoneUserPost"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingLeft="20dp"
                 android:textSize="19dp"></TextView>
@@ -70,7 +70,7 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingLeft="20dp"
                 android:text="Address : "
@@ -79,7 +79,7 @@
             <TextView
                 android:id="@+id/addressPost"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingLeft="20dp"
                 android:textSize="19dp"></TextView>
@@ -94,7 +94,7 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingLeft="20dp"
                 android:text="Describe : "
@@ -103,7 +103,7 @@
             <TextView
                 android:id="@+id/describe"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingLeft="20dp"
                 android:textSize="19dp"></TextView>
@@ -116,13 +116,14 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/imageAddress"
+                android:id="@+id/imageAddress1"
                 android:layout_width="90dp"
                 android:layout_height="90dp"
                 android:layout_marginLeft="20dp"
                 android:src="@mipmap/ic_launcher"></ImageView>
 
             <ImageView
+                android:id="@+id/imageAddress2"
                 android:layout_width="90dp"
                 android:layout_height="90dp"
                 android:layout_marginLeft="20dp"
@@ -130,7 +131,61 @@
 
 
         </LinearLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/imgLike"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:src="@drawable/ic_thumb_up_black_24dp"></ImageView>
+
+                <TextView
+                    android:id="@+id/txtLikeNewPost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="101"
+                    android:textSize="26dp"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginRight="30dp"
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:id="@+id/imgComment"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_mode_comment_black_24dp"></ImageView>
+
+                <TextView
+                    android:id="@+id/txtCommentNewPost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="101"
+                    android:textSize="26dp"></TextView>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

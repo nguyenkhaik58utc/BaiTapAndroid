@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 import com.example.bigexample.Data.DataBaseUser;
 
@@ -25,6 +26,8 @@ public class DangKy extends AppCompatActivity {
     private EditText date_of_birth;
     private ImageView cancelDangKy;
     private TextView submitDangKy;
+    private ImageView imgCalender;
+
     private static final int PICK_IMAGE = 222;
     private String GetValue(EditText e){
         return e.getText().toString().trim();
@@ -49,18 +52,28 @@ public class DangKy extends AppCompatActivity {
         date_of_birth = findViewById(R.id.txtDateOfBirth);
         cancelDangKy = findViewById(R.id.cancelDangKy);
         submitDangKy = findViewById(R.id.submitDangKy);
+        imgCalender = findViewById(R.id.imageBordAccountPages);
         data = new DataBaseUser(DangKy.this);
 
+        imgCalender.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+            }
+        });
 
         submitDangKy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String query = "SELECT *  FROM Account";
                 int maxId  = 0;
-                Cursor cursor = data.ALLRecord();
+                Cursor cursor = data.ALLRecord(query);
                 ArrayList<Integer> users = getIdUser(cursor);
-                maxId = users.get(0);
-                long resultAdd = data.Insert(maxId + 1, GetValue(txtTenDangNhap),1, GetValue(address),GetValue(phone));
+                for (int i = 0; i < users.size() ; i++ )
+                {
+                    if (maxId < users.get(i)) maxId = users.get(i);
+                }
+                long resultAdd = data.Insert(maxId + 1, GetValue(txtName), GetValue(address),GetValue(phone),GetValue(date_of_birth),"abc","abc",GetValue(txtTenDangNhap),"123");
                 if(resultAdd == -1){
                     Toast.makeText(DangKy.this, "Lỗi rồi!",Toast.LENGTH_SHORT).show();
                 }

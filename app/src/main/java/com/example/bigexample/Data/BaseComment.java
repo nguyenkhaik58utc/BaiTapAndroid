@@ -19,17 +19,9 @@ public class BaseComment extends BaseAdapter {
     ArrayList<Comment> list;
     Context context;
 
-    public BaseComment(Context c) {
+    public BaseComment(Context c,ArrayList<Comment> lstCmt) {
         context = c;
-        list = new ArrayList<Comment>();
-        Resources resources = c.getResources();
-        String[] nameUserComment = {"chim sẻ", "nsnd văn ver", "hải mario"};
-        int[] idUserComment = {1, 2, 3};
-        String[] contentComment = {"12 Dương Quảng Hàm", "đam phượng", "nam định"};
-
-        for (int i = 0; i < idUserComment.length; i++) {
-            list.add(new Comment(idUserComment[i], nameUserComment[i], contentComment[i]));
-        }
+        list = lstCmt;
     }
 
     @Override

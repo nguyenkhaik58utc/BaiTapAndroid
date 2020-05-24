@@ -7,9 +7,9 @@
 
     <!-- TODO: Update blank fragment layout -->
     <ImageView
+        android:id="@+id/imagePopup"
         android:layout_width="294dp"
         android:layout_height="336dp"
-        android:layout_gravity="center"
-        android:src="@mipmap/ic_launcher_round"></ImageView>
+        android:layout_gravity="center"></ImageView>
 
 </FrameLayout>

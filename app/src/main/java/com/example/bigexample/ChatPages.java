@@ -18,8 +18,6 @@ public class ChatPages extends Fragment {
 
     ImageView imgSearchChat;
     EditText txtSearchChat;
-    TextView txtAllChat;
-    ImageView imgAllChat;
 
     @Nullable
     @Override
@@ -27,23 +25,7 @@ public class ChatPages extends Fragment {
         View view = inflater.inflate(R.layout.chat_pages, container, false);
         imgSearchChat = (ImageView) view.findViewById(R.id.imgSearchChatPages);
         txtSearchChat = (EditText) view.findViewById(R.id.txtSearchChatPages);
-        txtAllChat = (TextView) view.findViewById(R.id.txtAllChat);
-        imgAllChat = (ImageView) view.findViewById(R.id.imgAllChat);
 
-        txtAllChat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ChatPopup chatPopup = new ChatPopup();
-                chatPopup.show(getFragmentManager(), "ChatPopup");
-            }
-        });
-        imgAllChat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ChatPopup chatPopup = new ChatPopup();
-                chatPopup.show(getFragmentManager(), "ChatPopup");
-            }
-        });
 
         return view;
     }

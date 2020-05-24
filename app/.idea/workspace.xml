@@ -12,26 +12,74 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="532e6839-ecb7-4923-970f-095dfafc4a60" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/DangKy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/BaseComment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/DataBaseUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/RowComment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/models/Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/layout/activity_dang_ky.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/layout/activity_row_comment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_17_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_17_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_maps_17_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_17_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/BaseChat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/DataBaseComment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/DataBaseLike.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/DataBasePost.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/DataChat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/FragmentEditDeletCmt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/FragmentEditUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/FragmentMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Maps/MyMapFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/RowMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Socket/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/fragmentMaps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/models/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_add_location_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_arrow_back_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_check_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_edit_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_mode_comment_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_more_vert_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_send_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_thumb_up_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_vpn_key_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/activity_row_message.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_edit_delet_cmt.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_edit_user.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_maps.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_message.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/AccountPages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/AccountPages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/ChatPages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/ChatPages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/ChatPopup.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/CustomAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/DangKy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/DangKy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/Base.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/BaseComment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/BaseComment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/DataBaseUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/DataBaseUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/FragmentHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/FragmentHome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Golobal/Golobal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Golobal/Golobal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/HomePages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/HomePages.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/MainPagesActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/MainPagesActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/ProfireUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/ProfireUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/ThueTroPages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/ThueTroPages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/TimTroPages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/TimTroPages.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/fragment_content_post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/fragment_content_post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/fragment_image_popup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/fragment_image_popup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/models/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/models/Comment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/models/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/models/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/ic_account_circle_black_24dp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_account_circle_black_24dp.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/account_pages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/account_pages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_dang_ky.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_dang_ky.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_new_post.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_new_post.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/chat_pages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/chat_pages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/chat_popup.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_content_post.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_content_post.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_image_popup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_image_popup.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/thuetro_pages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/thuetro_pages.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +96,12 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
@@ -68,13 +121,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="android.recentlyUsedThemes" value="Base.Theme.AppCompat&#10;Base.V23.Theme.AppCompat.Light" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Groovy JUnit" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/androidTest/java/com/example/bigexample" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads" />
+    <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -101,61 +153,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Android App.AndroidStudioProjects-BaiTapAndroid-app">
+  <component name="RunManager" selected="Android App.StudioProjects-BaiTapAndroid-app">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AndroidStudioProjects-BaiTapAndroid-app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
-      <module name="AndroidStudioProjects-BaiTapAndroid-app" />
-      <option name="DEPLOY" value="true" />
-      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
-      <option name="DEPLOY_AS_INSTANT" value="false" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
-      <Auto>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Auto>
-      <Hybrid>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Hybrid>
-      <Java />
-      <Native>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Native>
-      <Profilers>
-        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
-      </Profilers>
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
@@ -332,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588345985182</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="khai update profire User">
+      <created>1589389297581</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589389297581</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -380,6 +388,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="khai update ListView HousePage" />
-    <option name="LAST_COMMIT_MESSAGE" value="khai update ListView HousePage" />
+    <MESSAGE value="khai update profire User" />
+    <option name="LAST_COMMIT_MESSAGE" value="khai update profire User" />
   </component>
 </project>

@@ -10,14 +10,19 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.Bundle;
+import androidx.fragment.app.FragmentManager;
+
+import com.example.bigexample.Maps.MyMapFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class MainPagesActivity extends AppCompatActivity {
     public static Button btn;
     public static TextView txt;
-
+    private MyMapFragment myMapFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

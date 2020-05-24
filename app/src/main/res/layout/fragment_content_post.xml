@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -43,16 +44,16 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingLeft="20dp"
                 android:text="Price : "
                 android:textSize="19dp"></TextView>
 
             <TextView
-                android:id="@+id/phoneUserContentPost"
+                android:id="@+id/priceUserContentPost"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingLeft="20dp"
                 android:textSize="19dp"></TextView>
@@ -91,7 +92,7 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingLeft="20dp"
                 android:text="Describe : "
@@ -128,10 +129,86 @@
 
 
         </LinearLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/imgLikeContent"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_thumb_up_black_24dp"></ImageView>
+
+                <TextView
+                    android:id="@+id/txtLikeContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="101"
+                    android:textSize="26dp"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginRight="30dp"
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:id="@+id/imgCommentContent"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_mode_comment_black_24dp"></ImageView>
+
+                <TextView
+                    android:id="@+id/txtCommentContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="101"
+                    android:textSize="26dp"></TextView>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <ListView
             android:id="@+id/lstComment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"></ListView>
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            ></ListView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/txtNewComment"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:hint="nhập comment"></EditText>
+            <ImageView
+                android:id="@+id/imgSendComment"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_send_black_24dp"></ImageView>
+        </LinearLayout>
+
 
     </LinearLayout>
 

@@ -40,7 +40,11 @@ public class ProfireUser extends Fragment {
                         Toast.makeText(getActivity(),"Enter follow",Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.nav_chat_friend:
-                        Toast.makeText(getActivity(),"Enter chat friend",Toast.LENGTH_SHORT).show();
+                        FragmentMessage fragmentMessage = new FragmentMessage();
+                        getActivity().getSupportFragmentManager()
+                                .beginTransaction()
+                                .replace(R.id.fragment_container,fragmentMessage).addToBackStack("FragmentMessage")
+                                .commit();
                         break;
                     case R.id.nav_information_friend:
                         Bundle bundleProfireUser = new Bundle();

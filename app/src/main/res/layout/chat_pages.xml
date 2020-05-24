@@ -53,30 +53,20 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/txtAllChat"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/headerChatPages"
+        android:text="Chat"
+        android:textSize="32dp"
+        android:layout_marginLeft="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="Tất cả"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        android:textSize="30dp" />
-
-    <ImageView
-        android:id="@+id/imgAllChat"
-        android:layout_width="45dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/ic_arrow_drop_down_black_24dp"
-        app:layout_constraintLeft_toRightOf="@id/txtAllChat"
-        app:layout_constraintTop_toBottomOf="@id/headerChatPages"></ImageView>
+        app:layout_constraintTop_toBottomOf="@+id/headerChatPages"></TextView>
 
     <ListView
         android:id="@+id/lstChat"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/txtAllChat"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_width="wrap_content"
+        android:layout_height="554dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 </androidx.constraintlayout.widget.ConstraintLayout>
