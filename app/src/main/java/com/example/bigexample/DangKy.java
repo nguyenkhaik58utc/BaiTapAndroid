@@ -27,6 +27,7 @@ public class DangKy extends AppCompatActivity {
     private ImageView cancelDangKy;
     private TextView submitDangKy;
     private ImageView imgCalender;
+    private EditText txtPassword;
 
     private static final int PICK_IMAGE = 222;
     private String GetValue(EditText e){
@@ -53,6 +54,7 @@ public class DangKy extends AppCompatActivity {
         cancelDangKy = findViewById(R.id.cancelDangKy);
         submitDangKy = findViewById(R.id.submitDangKy);
         imgCalender = findViewById(R.id.imageBordAccountPages);
+        txtPassword = findViewById(R.id.txtPassWord);
         data = new DataBaseUser(DangKy.this);
 
         imgCalender.setOnClickListener(new View.OnClickListener() {
@@ -73,7 +75,7 @@ public class DangKy extends AppCompatActivity {
                 {
                     if (maxId < users.get(i)) maxId = users.get(i);
                 }
-                long resultAdd = data.Insert(maxId + 1, GetValue(txtName), GetValue(address),GetValue(phone),GetValue(date_of_birth),"abc","abc",GetValue(txtTenDangNhap),"123");
+                long resultAdd = data.Insert(maxId + 1, GetValue(txtName), GetValue(address),GetValue(phone),GetValue(date_of_birth),"","",GetValue(txtTenDangNhap),GetValue(txtPassword));
                 if(resultAdd == -1){
                     Toast.makeText(DangKy.this, "Lỗi rồi!",Toast.LENGTH_SHORT).show();
                 }

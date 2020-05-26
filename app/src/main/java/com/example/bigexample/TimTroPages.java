@@ -54,36 +54,65 @@ public class TimTroPages extends Fragment {
 
         data = new DataBasePost(getActivity());
 
+        if(Golobal.getCheckEditPost() == 1)
+        {
+            Bundle bundle = getArguments();
+            txtKhuVucTimTro.setText(bundle.getString("address"));
+            txtGiaPhongTimTro.setText(bundle.getString("price"));
+            txtMoTaTimTro.setText(bundle.getString("describe"));
+        }
+
         submitTimTro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String query = "SELECT *  FROM Post";
-                int maxId  = 0;
-                Cursor cursor = data.ALLRecord(query);
-                ArrayList<Integer> post = ThueTroPages.getIdPost(cursor);
-                for (int i = 0; i < post.size() ; i++ )
+                Golobal.setCheckEditPost(0);
+                if(Golobal.getCheckEditPost() == 1 )
                 {
-                    if (maxId < post.get(i)) maxId = post.get(i);
+                    Bundle bundle = getArguments();
+                    long resultUpdate = data.Update(bundle.getInt("idPost"), txtKhuVucTimTro.getText().toString(), txtGiaPhongTimTro.getText().toString(),txtMoTaTimTro.getText().toString(),"","");
+                    if (resultUpdate == 0) {
+                        Toast.makeText(getActivity(), "Error", Toast.LENGTH_SHORT).show();
+                    } else if (resultUpdate == 1) {
+                        Toast.makeText(getActivity(), "Successsfully updated", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getActivity(), "Error, multiple records updated", Toast.LENGTH_SHORT).show();
+                    }
+                    FragmentHome fragmentHome = new FragmentHome();
+                    FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                    transaction.replace(R.id.fragment_container, fragmentHome);
+                    transaction.commit();
+                }
+                else{
+                    String query = "SELECT *  FROM Post";
+                    int maxId  = 0;
+                    Cursor cursor = data.ALLRecord(query);
+                    ArrayList<Integer> post = ThueTroPages.getIdPost(cursor);
+                    for (int i = 0; i < post.size() ; i++ )
+                    {
+                        if (maxId < post.get(i)) maxId = post.get(i);
+                    }
+
+                    long resultAdd = data.Insert(maxId +1, Golobal.idUser, txtKhuVucTimTro.getText().toString(), txtGiaPhongTimTro.getText().toString(),txtMoTaTimTro.getText().toString(),"","");
+                    if(resultAdd == -1){
+                        Toast.makeText(getActivity(), "Lỗi rồi!",Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        Toast.makeText(getActivity(), "Đã thêm bài viết", Toast.LENGTH_SHORT).show();
+                    }
+
+                    FragmentHome fragmentHome = new FragmentHome();
+                    FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                    transaction.replace(R.id.fragment_container, fragmentHome);
+                    transaction.commit();
                 }
 
-                long resultAdd = data.Insert(maxId +1, Golobal.idUser, txtKhuVucTimTro.getText().toString(), txtGiaPhongTimTro.getText().toString(),txtMoTaTimTro.getText().toString(),"","");
-                if(resultAdd == -1){
-                    Toast.makeText(getActivity(), "Lỗi rồi!",Toast.LENGTH_SHORT).show();
-                }
-                else {
-                    Toast.makeText(getActivity(), "Đã thêm bài viết", Toast.LENGTH_SHORT).show();
-                }
-
-                FragmentHome fragmentHome = new FragmentHome();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, fragmentHome);
-                transaction.commit();
             }
         });
 
         cancelTimTro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Golobal.setCheckEditPost(0);
                 UploadPages uploadPages = new UploadPages();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 transaction.replace(R.id.fragment_container, uploadPages);

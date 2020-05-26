@@ -30,12 +30,6 @@ public class FragmentHome extends Fragment {
     DataBaseLike dataLike;
     DataBaseComment dataComment;
     ListView lst;
-    String[] nameUserPost = {"chim sẻ", "nsnd văn ver", "hải mario"};
-    int[] imgUserPost = {R.drawable.ribi, R.drawable.ribi, R.drawable.ribi};
-    String[] addressPost = {"12 Dương Quảng Hàm", "đam phượng", "nam định"};
-    String[] phoneUserPost = {"1000", "2000-2500", "1200"};
-    String[] describe = {"khép kín, giường, tử, nóng lạnh,..", "khép kín, giường, tử, nóng lạnh,..", "khép kín, giường, tử, nóng lạnh,.."};
-    int[] imageAddress = {R.drawable.ribi, R.drawable.button_focused, R.drawable.custom_button};
 
     @Override
     public void onStart() {

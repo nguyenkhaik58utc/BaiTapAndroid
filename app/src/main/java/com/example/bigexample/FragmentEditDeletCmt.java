@@ -43,24 +43,28 @@ public class FragmentEditDeletCmt extends DialogFragment {
         txtXoaCmt = view.findViewById(R.id.txtXoaCmt);
         txtSuaCmt = view.findViewById(R.id.txtSuaCmt);
         dataCmt = new DataBaseComment(getActivity());
+        final Bundle myBundleCmt = getArguments();
 
         txtXoaCmt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                long resultDelete = dataCmt.Delete(Golobal.getIdCmt());
+                long resultDelete = dataCmt.Delete(myBundleCmt.getInt("idCmt"));
                 if (resultDelete == 0) {
                     Toast.makeText(getActivity(), "Error", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(getActivity(), "Data is successfully deleted", Toast.LENGTH_SHORT).show();
                 }
-                getDialog().hide();
+                getDialog().cancel();
             }
         });
 
         txtSuaCmt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getDialog().hide();
+                Golobal.setCheckEditCmt(1);
+                getDialog().cancel();
+                fragment_content_post.txtNewComment.setText(Golobal.getContentCmt());
+                fragment_content_post.txtCancelEditCmt.setVisibility(View.VISIBLE);
             }
         });
 

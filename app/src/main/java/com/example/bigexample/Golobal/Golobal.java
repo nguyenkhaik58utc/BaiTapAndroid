@@ -17,6 +17,24 @@ public class Golobal {
     public static String passWord;
     public static int idCmt;
     public static String contentCmt;
+    public static int checkEditPost;
+    public static int checkEditCmt;
+
+    public static int getCheckEditCmt() {
+        return checkEditCmt;
+    }
+
+    public static void setCheckEditCmt(int checkEditCmt) {
+        Golobal.checkEditCmt = checkEditCmt;
+    }
+
+    public static int getCheckEditPost() {
+        return checkEditPost;
+    }
+
+    public static void setCheckEditPost(int checkEditPost) {
+        Golobal.checkEditPost = checkEditPost;
+    }
 
     public static int getIdCmt() {
         return idCmt;

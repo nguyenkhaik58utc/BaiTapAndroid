@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.IntentFilter;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -15,6 +16,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.fragment.app.FragmentManager;
 
+import com.example.bigexample.Broadcast.ExampleBroadcastReceiver;
+import com.example.bigexample.Golobal.Golobal;
 import com.example.bigexample.Maps.MyMapFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -22,7 +25,20 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainPagesActivity extends AppCompatActivity {
     public static Button btn;
     public static TextView txt;
-    private MyMapFragment myMapFragment;
+    ExampleBroadcastReceiver exampleBroadcastReceiver = new ExampleBroadcastReceiver();
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        IntentFilter intentFilter = new IntentFilter();
+        registerReceiver(exampleBroadcastReceiver, intentFilter);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        unregisterReceiver(exampleBroadcastReceiver);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,15 +59,27 @@ public class MainPagesActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.nav_home:
                     selectedframent = new HomePages();
+                    Golobal.setCheckEditCmt(0);
+                    if(Golobal.getCheckEditCmt() == 1 )
+                    fragment_content_post.txtCancelEditCmt.setVisibility(View.INVISIBLE);
                     break;
                 case R.id.nav_upload:
                     selectedframent = new UploadPages();
+                    Golobal.setCheckEditCmt(0);
+                    if(Golobal.getCheckEditCmt() == 1 )
+                    fragment_content_post.txtCancelEditCmt.setVisibility(View.INVISIBLE);
                     break;
                 case R.id.nav_chat:
                     selectedframent = new ChatPages();
+                    Golobal.setCheckEditCmt(0);
+                    if(Golobal.getCheckEditCmt() == 1 )
+                    fragment_content_post.txtCancelEditCmt.setVisibility(View.INVISIBLE);
                     break;
                 case R.id.nav_account:
                     selectedframent = new AccountPages();
+                    Golobal.setCheckEditCmt(0);
+                    if(Golobal.getCheckEditCmt() == 1 )
+                    fragment_content_post.txtCancelEditCmt.setVisibility(View.INVISIBLE);
                     break;
             }
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedframent).commit();

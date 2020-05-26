@@ -12,74 +12,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="532e6839-ecb7-4923-970f-095dfafc4a60" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_17_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_17_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_maps_17_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_17_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/BaseChat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/DataBaseComment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/DataBaseLike.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/DataBasePost.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/DataChat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/FragmentEditDeletCmt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/FragmentEditUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/FragmentMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Maps/MyMapFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/RowMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Socket/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/fragmentMaps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/models/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_add_location_black_24dp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_arrow_back_black_24dp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_check_black_24dp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_edit_black_24dp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_mode_comment_black_24dp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_more_vert_black_24dp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_send_black_24dp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_thumb_up_black_24dp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_vpn_key_black_24dp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/layout/activity_row_message.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_edit_delet_cmt.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_edit_user.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_maps.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_message.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Broadcast/ExampleBroadcastReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/BaseMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/FragmentEditDeletePost.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/models/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_edit_delete_post.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/AccountPages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/AccountPages.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/ChatPages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/ChatPages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/ChatPopup.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/CustomAdapter.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/DangKy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/DangKy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/Base.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/BaseComment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/BaseComment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/DataBaseUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/DataBaseUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/BaseChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/BaseChat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/DataBaseComment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/DataBaseComment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/DataChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Data/DataChat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/FragmentEditDeletCmt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/FragmentEditDeletCmt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/FragmentEditUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/FragmentEditUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/FragmentHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/FragmentHome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/FragmentMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/FragmentMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Golobal/Golobal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/Golobal/Golobal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/HomePages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/HomePages.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/MainPagesActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/MainPagesActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/ProfireUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/ProfireUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/ThueTroPages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/ThueTroPages.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/TimTroPages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/TimTroPages.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/fragment_content_post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/fragment_content_post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/fragment_image_popup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/fragment_image_popup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/models/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/models/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bigexample/models/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bigexample/models/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/ic_account_circle_black_24dp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_account_circle_black_24dp.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/account_pages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/account_pages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_dang_ky.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_dang_ky.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_new_post.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_new_post.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/chat_pages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/chat_pages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/chat_popup.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_content_post.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_content_post.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_image_popup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_image_popup.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/thuetro_pages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/thuetro_pages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_message.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_message.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/row_chat.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/row_chat.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -125,7 +84,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Groovy JUnit" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/androidTest/java/com/example/bigexample" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Test/BaiTapAndroid/BaiTapAndroid" />
     <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -340,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589389297581</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="khai update project">
+      <created>1590341204697</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1590341204697</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -389,6 +355,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="khai update ListView HousePage" />
     <MESSAGE value="khai update profire User" />
-    <option name="LAST_COMMIT_MESSAGE" value="khai update profire User" />
+    <MESSAGE value="khai update project" />
+    <option name="LAST_COMMIT_MESSAGE" value="khai update project" />
   </component>
 </project>

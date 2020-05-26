@@ -15,6 +15,8 @@ public class DataChat extends SQLiteOpenHelper {
     private static final String ID_USER1 = "idUser1";
     private static final String ID_USER2 = "idUser2";
     private static final String CONTENT_CHAT = "contentChat";
+    private static final String DATE = "date";
+
 
     private SQLiteDatabase myDB;
 
@@ -34,6 +36,10 @@ public class DataChat extends SQLiteOpenHelper {
         return ID_USER2;
     }
 
+    public static String getDATE() {
+        return DATE;
+    }
+
     public Cursor Load(String sql){
         openDB();
         return myDB.rawQuery(sql, null);
@@ -44,7 +50,8 @@ public class DataChat extends SQLiteOpenHelper {
                 " ( " + ID_CHAT + " INTEGER PRIMARY KEY, " +
                 ID_USER1 + " INTEGER NOT NULL, " +
                 ID_USER2 + " INTEGER NOT NULL, " +
-                CONTENT_CHAT + " TEXT NOT NULL" + ")";
+                CONTENT_CHAT + " TEXT NOT NULL," +
+                DATE + " TEXT NOT NULL" + ")";
         db.execSQL(queryTable);
     }
 
@@ -61,12 +68,13 @@ public class DataChat extends SQLiteOpenHelper {
         }
     }
 
-    public long Insert(int id,int idUser1,int idUser2,String content){
+    public long Insert(int id,int idUser1,int idUser2,String content,String date){
         ContentValues values = new ContentValues();
         values.put(ID_CHAT, id);
         values.put(ID_USER1,idUser1);
         values.put(ID_USER2, idUser2);
         values.put(CONTENT_CHAT,content);
+        values.put(DATE,date);
         return myDB.insert(TABLE_NAME, null, values);
     }
     public long Update(int id,int idUser1,int idUser2,String content){

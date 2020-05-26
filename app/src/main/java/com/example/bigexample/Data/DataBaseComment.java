@@ -73,12 +73,10 @@ public class DataBaseComment extends SQLiteOpenHelper {
         values.put(CONTENT_COMMENT,content);
         return myDB.insert(TABLE_NAME, null, values);
     }
-    public long Update(int id,int idPost,int idUser,String content){
+    public long Update(int id,String content){
         ContentValues values = new ContentValues();
-        values.put(ID_POST,idPost);
-        values.put(ID_USER, idUser);
         values.put(CONTENT_COMMENT, content);
-        String where = ID_USER + " = " + id;
+        String where = ID_COMMENT + " = " + id;
         return myDB.update(TABLE_NAME, values, where, null);
     }
     public long Delete(int id){

@@ -2,6 +2,9 @@ package com.example.bigexample;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -18,6 +21,14 @@ import androidx.fragment.app.Fragment;
 import com.example.bigexample.Data.DataBaseUser;
 import com.example.bigexample.Golobal.Golobal;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.io.ByteArrayOutputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
+import java.sql.Blob;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -37,7 +48,10 @@ public class FragmentEditUser extends Fragment
     private FloatingActionButton btnEdit;
     private FloatingActionButton btnCancel;
     private FloatingActionButton btnSubmit;
+    public InputStream inputStream;
+    public Bitmap bitmap;
     Uri imageUri;
+    String url;
     String urlImageAvatar= "";
     private static final int PICK_IMAGE = 222;
     DataBaseUser dataUser;
@@ -59,7 +73,7 @@ public class FragmentEditUser extends Fragment
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(final LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_edit_user, container, false);
@@ -76,7 +90,10 @@ public class FragmentEditUser extends Fragment
         btnEdit = view.findViewById(R.id.floatingActionButton);
         dataUser = new DataBaseUser(getActivity());
 
-        imageUserEditUser.setImageURI(Uri.parse(Golobal.getImgAvatar()));
+
+        byte[] houseImage = Golobal.getImgAvatar().getBytes();
+        Bitmap bitmap = BitmapFactory.decodeByteArray(houseImage, 0, houseImage.length);
+        imageUserEditUser.setImageBitmap(bitmap);
         nameUserEditUser.setText(Golobal.getNameUser());
         txtNameUserEditUser.setText(Golobal.getNameUser());
         txtTenDangNhapEditUser.setText(Golobal.getNameAccounts());
@@ -133,7 +150,11 @@ public class FragmentEditUser extends Fragment
                 txtAddressEditUser.setEnabled(false);
                 txtPhoneEditUser.setEnabled(false);
 
-                long resultUpdate = dataUser.Update(Golobal.getIdUser(), txtNameUserEditUser.getText().toString(), txtAddressEditUser.getText().toString(),txtPhoneEditUser.getText().toString(),txtDateEditUser.getText().toString(),urlImageAvatar,txtTenDangNhapEditUser.getText().toString());
+
+                String a = imageViewAnhtoByte(imageUserEditUser).toString();
+                byte[] byteArray = imageViewAnhtoByte(imageUserEditUser);
+                url =  new String(byteArray,StandardCharsets.UTF_8);
+                long resultUpdate = dataUser.Update(Golobal.getIdUser(), txtNameUserEditUser.getText().toString(), txtAddressEditUser.getText().toString(),txtPhoneEditUser.getText().toString(),txtDateEditUser.getText().toString(),url,txtTenDangNhapEditUser.getText().toString());
                 if (resultUpdate == 0) {
                     Toast.makeText(getActivity(), "Error", Toast.LENGTH_SHORT).show();
                 } else if (resultUpdate == 1) {
@@ -166,10 +187,26 @@ public class FragmentEditUser extends Fragment
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == PICK_IMAGE && resultCode == Activity.RESULT_OK) {
             imageUri = data.getData();
-            imageUserEditUser.setImageURI(imageUri);
-            urlImageAvatar = imageUri.toString();
+
+            try {
+                inputStream = getActivity().getApplicationContext().getContentResolver().openInputStream(imageUri);
+                bitmap = BitmapFactory.decodeStream(inputStream);
+                imageUserEditUser.setImageBitmap(bitmap);
+            } catch (FileNotFoundException ex) {
+                ex.printStackTrace();
+            }
 
 
         }
+    }
+
+
+
+    private byte[] imageViewAnhtoByte(ImageView image) {
+        Bitmap bitmap = ((BitmapDrawable) image.getDrawable()).getBitmap();
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+        byte[] byteArray = stream.toByteArray();
+        return byteArray;
     }
 }

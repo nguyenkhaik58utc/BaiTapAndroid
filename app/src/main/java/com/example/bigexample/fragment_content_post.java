@@ -47,11 +47,12 @@ public class fragment_content_post extends Fragment {
     DataBaseComment dataCmt;
     DataBaseUser dataUser;
     DataBaseLike dataLike;
-    ListView lst;
-    EditText txtNewComment;
+    public static ListView lst;
+    public static EditText txtNewComment;
     ImageView imgSendComment;
     public ArrayList<Comment> lstCmt;
     public Bundle bundle1;
+    public static TextView txtCancelEditCmt;
 
     public fragment_content_post() {
         // Required empty public constructor
@@ -85,6 +86,7 @@ public class fragment_content_post extends Fragment {
         describeContentPost = view.findViewById(R.id.describeContentPost);
         imageAddressContentPost1 = view.findViewById(R.id.imageAddressContentPost1);
         imageAddressContentPost2 = view.findViewById(R.id.imageAddressContentPost2);
+        txtCancelEditCmt = view.findViewById(R.id.txtCancelEditCmt);
         txtNumberLike = view.findViewById(R.id.txtLikeContent);
         txtNumberCmt = view.findViewById(R.id.txtCommentContent);
         txtNewComment = view.findViewById(R.id.txtNewComment);
@@ -107,9 +109,13 @@ public class fragment_content_post extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if(lstCmt.get(position).getIdUserCmt() == Golobal.getIdUser())
                 {
+                    Bundle bundleCmt = new Bundle();
+                    bundleCmt.putInt("idCmt",lstCmt.get(position).getId());
+                    bundleCmt.putString("contentCmt",lstCmt.get(position).getContentCmt());
                     Golobal.setIdCmt(lstCmt.get(position).getId());
                     Golobal.setContentCmt(lstCmt.get(position).getContentCmt());
                     FragmentEditDeletCmt editDeletCmt = new FragmentEditDeletCmt();
+                    editDeletCmt.setArguments(bundleCmt);
                     editDeletCmt.show(getFragmentManager(),"FragmentEditDeletCmt");
                 }
             }
@@ -173,33 +179,64 @@ public class fragment_content_post extends Fragment {
         imgSendComment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(txtNewComment.getText().toString() != null)
+                if(Golobal.getCheckEditCmt() == 1)
                 {
-                    String query = "SELECT *  FROM tableComment";
-                    int maxId  = 0;
-                    Cursor cursor = dataCmt.getWritableDatabase().rawQuery(query,null);
-                    ArrayList<Integer> users = getIdCmt(cursor);
-                    for (int i = 0; i < users.size() ; i++ )
-                    {
-                        if (maxId < users.get(i)) maxId = users.get(i);
-                    }
-                    int idPost = bundle.getInt("idPost");
-                    int idUser = Golobal.getIdUser();
-                    String a = txtNewComment.getText().toString();
-                    long resultAdd = dataCmt.Insert(maxId + 1,idPost, idUser,a);
-                    if(resultAdd == -1){
-                        Toast.makeText(getActivity(), "Lỗi rồi!",Toast.LENGTH_SHORT).show();
-                    }
-                    else {
-                        Toast.makeText(getActivity(), "Đã thêm Comment", Toast.LENGTH_SHORT).show();
+
+                    long resultUpdate = dataCmt.Update(Golobal.getIdCmt(), txtNewComment.getText().toString());
+                    if (resultUpdate == 0) {
+                        Toast.makeText(getActivity(), "Error", Toast.LENGTH_SHORT).show();
+                    } else if (resultUpdate == 1) {
+                        Toast.makeText(getActivity(), "Successsfully updated", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getActivity(), "Error, multiple records updated", Toast.LENGTH_SHORT).show();
                     }
                     txtNewComment.setText("");
-                    txtCommentContent.setText(String.valueOf( Integer.parseInt(txtCommentContent.getText().toString()) + 1 ));
                     String query1 = "Select * from tableComment where idPost = " + bundle.getInt("idPost");
                     final Cursor cursor1 = dataCmt.getWritableDatabase().rawQuery(query1,null);
                     lstCmt = getAllCmt(cursor1);
                     lst.setAdapter(new BaseComment(getActivity(),lstCmt));
+                    Golobal.setCheckEditCmt(0);
+                    txtCancelEditCmt.setVisibility(View.INVISIBLE);
                 }
+                else
+                {
+                    if(txtNewComment.getText().toString() != null)
+                    {
+                        String query = "SELECT *  FROM tableComment";
+                        int maxId  = 0;
+                        Cursor cursor = dataCmt.getWritableDatabase().rawQuery(query,null);
+                        ArrayList<Integer> users = getIdCmt(cursor);
+                        for (int i = 0; i < users.size() ; i++ )
+                        {
+                            if (maxId < users.get(i)) maxId = users.get(i);
+                        }
+                        int idPost = bundle.getInt("idPost");
+                        int idUser = Golobal.getIdUser();
+                        String a = txtNewComment.getText().toString();
+                        long resultAdd = dataCmt.Insert(maxId + 1,idPost, idUser,a);
+                        if(resultAdd == -1){
+                            Toast.makeText(getActivity(), "Lỗi rồi!",Toast.LENGTH_SHORT).show();
+                        }
+                        else {
+                            Toast.makeText(getActivity(), "Đã thêm Comment", Toast.LENGTH_SHORT).show();
+                        }
+                        txtNewComment.setText("");
+                        txtCommentContent.setText(String.valueOf( Integer.parseInt(txtCommentContent.getText().toString()) + 1 ));
+                        String query1 = "Select * from tableComment where idPost = " + bundle.getInt("idPost");
+                        final Cursor cursor1 = dataCmt.getWritableDatabase().rawQuery(query1,null);
+                        lstCmt = getAllCmt(cursor1);
+                        lst.setAdapter(new BaseComment(getActivity(),lstCmt));
+                    }
+                }
+            }
+        });
+
+        txtCancelEditCmt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Golobal.setCheckEditCmt(0);
+                txtCancelEditCmt.setVisibility(View.INVISIBLE);
+                txtNewComment.setText("");
             }
         });
 

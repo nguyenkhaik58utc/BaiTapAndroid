@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.Uri;
@@ -14,6 +15,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.bigexample.Broadcast.ExampleBroadcastReceiver;
 import com.example.bigexample.Data.DataBaseComment;
 import com.example.bigexample.Data.DataBaseLike;
 import com.example.bigexample.Data.DataBaseUser;
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     DataBaseUser data;
     DataBaseLike dataLike;
     DataBaseComment dataCmt;
+    ExampleBroadcastReceiver exampleBroadcastReceiver = new ExampleBroadcastReceiver();
 
     @Override
     protected void onStart() {
@@ -37,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         data.openDB();
         dataLike.openDB();
         dataCmt.openDB();
+        IntentFilter intentFilter = new IntentFilter();
+        registerReceiver(exampleBroadcastReceiver, intentFilter);
     }
 
     @Override
@@ -45,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         data.closeDB();
         dataLike.closeDB();
         dataCmt.closeDB();
+        unregisterReceiver(exampleBroadcastReceiver);
     }
 
     @Override

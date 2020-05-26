@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -34,6 +35,7 @@ public class AccountPages extends Fragment {
     DataBasePost dataPost;
     DataBaseLike dataLike;
     DataBaseComment dataComment;
+    public ArrayList<Post> lstPost;
 
     @Override
     public void onStart() {
@@ -79,8 +81,24 @@ public class AccountPages extends Fragment {
                         .commit();
             }
         });
+        lstPost = getPost(cursor);
+        lst.setAdapter(new Base(getActivity(),lstPost));
 
-        lst.setAdapter(new Base(getActivity(),getPost(cursor)));
+        lst.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Bundle bundle = new Bundle();
+                bundle.putInt("idPost",lstPost.get(position).getIdPost());
+                bundle.putString("address",lstPost.get(position).getAddressPost());
+                bundle.putString("price",lstPost.get(position).getPricePost());
+                bundle.putString("describe",lstPost.get(position).getDescribe());
+                bundle.putString("imgAddress1",lstPost.get(position).getImageAddress());
+                bundle.putString("imgAddress2",lstPost.get(position).getImageAddress2());
+                FragmentEditDeletePost editDeletePost = new FragmentEditDeletePost();
+                editDeletePost.setArguments(bundle);
+                editDeletePost.show(getFragmentManager(),"FragmentEditDeletePost");
+            }
+        });
 
         return view;
     }
